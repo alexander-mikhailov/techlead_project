@@ -21,7 +21,7 @@ public class RestImportServiceClient implements ImportServiceClient {
 
     private final ThreadLocal<String> importServiceBaseUrl = new ThreadLocal<>();
 
-    public RestImportServiceClient(RestTemplate restTemplate, LoadBalancerClient loadBalancer, @Value("${app.importServiceId}") String serviceId) {
+    public RestImportServiceClient(RestTemplate restTemplate, LoadBalancerClient loadBalancer, @Value("${app.importServiceId: import-service}") String serviceId) {
         this.restTemplate = restTemplate;
         this.loadBalancer = loadBalancer;
         this.serviceId = serviceId;
