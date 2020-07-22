@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: import-service
+  main:
+    banner-mode: off
+
+app:
+  scheduling:
+    enable: true
+
+
