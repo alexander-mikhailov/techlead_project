@@ -1,5 +1,5 @@
 ### How to
-Run 2+ instances of import service and check logs to see processing-service routes requests.
+Run 2+ instances of import-service and check logs to see processing-service routes requests.
 
 ### Issues
 
