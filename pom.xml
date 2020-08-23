@@ -121,6 +121,7 @@
 
     <modules>
         <module>solution1 (RestTemplate+Ribbon)</module>
+        <module>solution2 (RestTemplate+Eureka)</module>
     </modules>
 
 </project>

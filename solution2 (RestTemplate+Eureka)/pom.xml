@@ -10,11 +10,23 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>solution1-resttemplate-ribbon-parent</artifactId>
+    <artifactId>solution2-resttemplate-eureka-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Solution1 (RestTemplate+Ribbon) Parent</name>
+    <name>Solution2 (RestTemplate+Eureka) Parent</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -54,8 +66,9 @@
     </build>
 
     <modules>
-        <module>import-service-s1</module>
-        <module>processing-service-s1</module>
+        <module>discovery-service</module>
+        <module>import-service-s2</module>
+        <module>processing-service-s2</module>
     </modules>
 
 </project>
