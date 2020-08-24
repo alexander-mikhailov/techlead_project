@@ -1,13 +1,13 @@
-package by.hardsoftskills.s2.processingservice;
+package by.hardsoftskills.configservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProcessingServiceApplicationTests {
+public class ConfigServiceApplicationIT {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }

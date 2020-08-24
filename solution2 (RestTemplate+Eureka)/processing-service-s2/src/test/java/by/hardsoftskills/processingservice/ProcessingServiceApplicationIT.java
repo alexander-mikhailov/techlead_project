@@ -1,13 +1,13 @@
-package by.hardsoftskills.s2.discoveryservice;
+package by.hardsoftskills.processingservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class DiscoveryServiceApplicationTests {
+class ProcessingServiceApplicationIT {
 
     @Test
-    public void contextLoads() {
+    void contextLoads() {
     }
 
 }
