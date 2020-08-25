@@ -4,15 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>by.hardsoftskills</groupId>
-        <artifactId>solution1-resttemplate-ribbon-parent</artifactId>
+        <artifactId>solution1-v1-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>processing-service-s1</artifactId>
+    <artifactId>processing-service</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>Solution1 (RestTemplate+Ribbon) - Processing Service</name>
-
-    <description>Solution1 (RestTemplate+Ribbon) - Processing Service</description>
+    <name>Solution1_v1 - Processing Service</name>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -21,16 +20,7 @@
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
+    <build>
+        <defaultGoal>package</defaultGoal>
+    </build>
 </project>

@@ -4,13 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>by.hardsoftskills</groupId>
-        <artifactId>solution1-resttemplate-ribbon-parent</artifactId>
+        <artifactId>solution1-v1-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>import-service-s1</artifactId>
+    <artifactId>import-service</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>Solution1 (RestTemplate+Ribbon) - Import Service</name>
+    <name>Solution1_v1 - Import Service</name>
+    <packaging>jar</packaging>
 
-    <description>Solution1 (RestTemplate+Ribbon) - Import Service</description>
+    <build>
+        <defaultGoal>package</defaultGoal>
+    </build>
 </project>
