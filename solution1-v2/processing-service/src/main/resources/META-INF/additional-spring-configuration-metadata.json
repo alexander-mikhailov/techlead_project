@@ -1,0 +1,12 @@
+{
+  "properties": [
+    {
+      "name": "app.scheduling.enable",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "app.importServiceId",
+      "type": "java.lang.String"
+    }
+  ]
+}
