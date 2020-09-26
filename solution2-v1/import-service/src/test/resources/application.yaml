@@ -1,0 +1,4 @@
+app:
+  labResultType: 1
+  scheduling:
+    enable: false

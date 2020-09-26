@@ -1,0 +1,12 @@
+{
+  "properties": [
+    {
+      "name": "app.labResultType",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "app.labResultProcessingTime",
+      "type": "java.lang.Integer"
+    }
+  ]
+}
