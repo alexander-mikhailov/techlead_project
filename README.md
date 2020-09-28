@@ -29,8 +29,8 @@ See solution1-v1 issues.
 ### Advantages
 * Dynamic registration of new instances of a service without necessity to change existing configuration and to redeploy the service.
 
-## solution1-v3 (RestTemplate + Eureka + Config Server)
-A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client and Cloud Config server/client.
+## solution1-v3 (RestTemplate + Eureka + Cloud Config Server)
+A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client and Spring Cloud Config server/client.
 
 ### How to
 * Run config-service
@@ -43,8 +43,8 @@ See solution1-v2 issues.
 * See solution1-v2 advantages
 * Having a central place to manage external properties for applications across all environments and ability to reload properties on the fly using /resfresh spring boot actuator endpoint
 
-## solution1-v4 (RestTemplate + Eureka + Config Server + Jaeger tracing)
-A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client, Cloud Config server/client and Jaeger implementation for distibuted tracing.
+## solution1-v4 (RestTemplate + Eureka + Cloud Config Server + Jaeger)
+A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client, Sring Cloud Config server/client and Jaeger implementation for distibuted tracing.
 
 ### How to
 * Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend
