@@ -39,6 +39,20 @@ See solution1-v1 (RestTemplate + Ribbon)
 * See solution1-v2 (RestTemplate + Eureka)
 * Having a central place to manage external properties for applications across all environments and ability to reload properties on the fly using /resfresh spring boot actuator endpoint
 
+## solution1-v4 (RestTemplate + Eureka + Config Server + Jaeger tracing)
+A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client, Cloud Config server/client and Jaeger implementation for distibuted tracing.
+
+### How to
+Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend.
+See solution1-v1 (RestTemplate + Ribbon)
+
+### Issues
+See solution1-v1 (RestTemplate + Ribbon)
+  
+### Advantages
+* See solution1-v3 (RestTemplate + Eureka + Config Server)
+* Having end-to-end distributed tracing (Jaeger in this case) allows us to monitor and troubleshoot transactions in complex distributed systems.
+
 ## solution2-v1 (RabbitMQ)
 A solution which is implemented using RabbitMQ message broker.
 
