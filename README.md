@@ -18,10 +18,11 @@ Run 2+ instances of import-service and check logs to see processing-service rout
 A solution which is implemented using spring RestTemplate http client and Eureka discovery server/client.
 
 ### How to
-See solution1-v1 (RestTemplate + Ribbon)
+* Run discovery-service
+* Apply How to steps from solution1-v1
 
 ### Issues
-See solution1-v1 (RestTemplate + Ribbon)
+See solution1-v1 issues
   
 ### Advantages
 * Dynamic registration of new instances of a service without necessity to change existing configuration and to redeploy the service.
@@ -30,37 +31,38 @@ See solution1-v1 (RestTemplate + Ribbon)
 A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client and Cloud Config server/client.
 
 ### How to
-See solution1-v1 (RestTemplate + Ribbon)
+* Run config-service
+* Apply How to steps from solution1-v2
 
 ### Issues
-See solution1-v1 (RestTemplate + Ribbon)
+See solution1-v2 issues
   
 ### Advantages
-* See solution1-v2 (RestTemplate + Eureka)
+* See solution1-v2 advantages
 * Having a central place to manage external properties for applications across all environments and ability to reload properties on the fly using /resfresh spring boot actuator endpoint
 
 ## solution1-v4 (RestTemplate + Eureka + Config Server + Jaeger tracing)
 A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client, Cloud Config server/client and Jaeger implementation for distibuted tracing.
 
 ### How to
-Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend.
-See solution1-v1 (RestTemplate + Ribbon)
+* Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend.
+* Apply How to steps from solution1-v3
 
 ### Issues
-See solution1-v1 (RestTemplate + Ribbon)
+See solution1-v3 issues
   
 ### Advantages
-* See solution1-v3 (RestTemplate + Eureka + Config Server)
+* See solution1-v3 advantages
 * Having end-to-end distributed tracing (Jaeger in this case) allows us to monitor and troubleshoot transactions in complex distributed systems.
 
 ## solution2-v1 (RabbitMQ)
 A solution which is implemented using RabbitMQ message broker.
 
 ### How to
-Run RabbitMQ message broker.
-Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1.
-In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages.
-To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000.
+* Run RabbitMQ message broker.
+* Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1.
+* In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages.
+* To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000.
   
 ### Advantages
 * Absence of http inetegration layer.
