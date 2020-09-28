@@ -5,7 +5,9 @@ Implementation of solutions designed for a practical project during participatio
 A solution which is implemented using spring RestTemplate http client and Ribbon cline side balancer.
 
 ### How to
-Run 2+ instances of import-service and check logs to see processing-service routes requests.
+* Run 2+ instances of import-service
+* Run 1+ instances of processing-service
+* Check in the log processing-service routes requests
 
 ### Issues
 * Faced the problem of routing a request to a specific host within the bound requests from processing-service to import-service, since acknowledge the request should be sent to the service from which the read request came from.
@@ -22,7 +24,7 @@ A solution which is implemented using spring RestTemplate http client and Eureka
 * Apply How to steps from solution1-v1
 
 ### Issues
-See solution1-v1 issues
+See solution1-v1 issues.
   
 ### Advantages
 * Dynamic registration of new instances of a service without necessity to change existing configuration and to redeploy the service.
@@ -35,7 +37,7 @@ A solution which is implemented using spring RestTemplate http client, Eureka di
 * Apply How to steps from solution1-v2
 
 ### Issues
-See solution1-v2 issues
+See solution1-v2 issues.
   
 ### Advantages
 * See solution1-v2 advantages
@@ -45,26 +47,26 @@ See solution1-v2 issues
 A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client, Cloud Config server/client and Jaeger implementation for distibuted tracing.
 
 ### How to
-* Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend.
+* Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend
 * Apply How to steps from solution1-v3
 
 ### Issues
-See solution1-v3 issues
+See solution1-v3 issues.
   
 ### Advantages
 * See solution1-v3 advantages
-* Having end-to-end distributed tracing (Jaeger in this case) allows us to monitor and troubleshoot transactions in complex distributed systems.
+* Having end-to-end distributed tracing (Jaeger in this case) allows us to monitor and troubleshoot transactions in complex distributed systems
 
 ## solution2-v1 (RabbitMQ)
 A solution which is implemented using RabbitMQ message broker.
 
 ### How to
-* Run RabbitMQ message broker.
-* Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1.
-* In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages.
-* To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000.
+* Run RabbitMQ message broker
+* Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1
+* In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages
+* To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000
   
 ### Advantages
-* Absence of http inetegration layer.
+* Absence of http inetegration layer
 * Visual monitoring tool (RabbitMQ management console)
 
