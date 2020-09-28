@@ -47,7 +47,7 @@ See solution1-v2 issues.
 A solution which is implemented using spring RestTemplate http client, Eureka discovery server/client, Sring Cloud Config server/client and Jaeger implementation for distibuted tracing.
 
 ### How to
-* Run docker "jaeger-all-in-one.yml" compose file to start Jaeger backend
+* You can use Docker Compose to quickly launch a Jaeger server if you have Docker running locally (there is a docker-compose.yml in the root of the module) or you can install it locally and launch
 * Apply How to steps from solution1-v3
 
 ### Issues
@@ -61,7 +61,7 @@ See solution1-v3 issues.
 A solution which is implemented using RabbitMQ message broker.
 
 ### How to
-* Run RabbitMQ message broker
+* You can use Docker Compose to quickly launch a RabbitMQ server if you have Docker running locally (there is a docker-compose.yml in the root of the module) or you can install it locally and launch
 * Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1
 * In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages
 * To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000
@@ -69,4 +69,17 @@ A solution which is implemented using RabbitMQ message broker.
 ### Advantages
 * Absence of http inetegration layer
 * Visual monitoring tool (RabbitMQ management console)
+
+## solution2-v2 (RabbitMQ + Jaeger)
+A solution which is implemented using RabbitMQ message broker and Jaeger implementation for distibuted tracing.
+
+### How to
+** You can use Docker Compose to quickly launch a RabbitMQ and a Jaeger server if you have Docker running locally (there is a docker-compose.yml in the root of the module) or you can install them locally and launch
+* Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1
+* In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages
+* To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000
+  
+### Advantages
+* See solution2-v1 advantages
+* Having end-to-end distributed tracing (Jaeger in this case) allows us to monitor and troubleshoot transactions in complex distributed systems
 
