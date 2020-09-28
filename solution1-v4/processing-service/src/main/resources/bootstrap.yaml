@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: processing-service
+  main:
+    banner-mode: off
+  cloud:
+    config:
+      uri: http://localhost:8888
