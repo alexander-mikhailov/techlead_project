@@ -27,6 +27,7 @@
         <maven-jacoco-plugin.version>0.8.5</maven-jacoco-plugin.version>
         <springframework.boot.version>2.3.2.RELEASE</springframework.boot.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <opentracing-spring-jaeger.version>3.2.0</opentracing-spring-jaeger.version>
     </properties>
 
     <dependencyManagement>
