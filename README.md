@@ -1,5 +1,8 @@
 # Technical Leadership Project
-Implementation of solutions designed for a practical project during participation at Technical Leadership training.
+![Technical Leadership Project schema](https://github.com/alexander-mikhailov/techlead_project/blob/master/techlead_project.png)
+
+
+Below are implementations of second and third solutions from the schema above which was designed for a practical project during participation at Technical Leadership training.
 
 ## solution1-v1 (RestTemplate + Ribbon)
 A solution which is implemented using spring RestTemplate http client and Ribbon cline side balancer.
