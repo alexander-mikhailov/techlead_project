@@ -74,7 +74,7 @@ A solution which is implemented using RabbitMQ message broker.
 A solution which is implemented using RabbitMQ message broker and Jaeger implementation for distibuted tracing.
 
 ### How to
-** You can use Docker Compose to quickly launch a RabbitMQ and a Jaeger server if you have Docker running locally (there is a docker-compose.yml in the root of the module) or you can install them locally and launch
+* You can use Docker Compose to quickly launch a RabbitMQ and a Jaeger server if you have Docker running locally (there is a docker-compose.yml in the root of the module) or you can install them locally and launch
 * Run 1 instance of import-service with VM option -Dapp.labResultType=1 and 1 instance of processing-service with VM options -Dapp.labResultType=1 -Dapp.labResultProcessingTime=4000. Check RabbitMQ management console. You should not see more than 1 message in queue-lab-result-type-1
 * In additional run 1 instance of import-service with VM option -Dapp.labResultType=2 and 1 instance of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000. Check RabbitMQ management console. You should see queue queue-lab-result-type-2 is gradually filling up with messages
 * To empty the queue run 3+ instances of processing-service with VM options -Dapp.labResultType=2 -Dapp.labResultProcessingTime=15000
