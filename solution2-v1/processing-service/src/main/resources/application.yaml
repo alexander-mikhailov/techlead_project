@@ -9,5 +9,5 @@ spring:
 
 app:
   labResultType: 1
-  labResultProcessingTime: 10
+  labResultProcessingTime: 1000
 

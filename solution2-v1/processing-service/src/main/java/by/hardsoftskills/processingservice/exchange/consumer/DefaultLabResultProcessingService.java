@@ -15,6 +15,7 @@ public class DefaultLabResultProcessingService implements LabResultProcessingSer
         this.processingTime = processingTime;
     }
 
+    @Override
     public void processLabResult(String labResult) {
         LOGGER.info(String.format("Processing lab result <%s>", labResult));
         try {
